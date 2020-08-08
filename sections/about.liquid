@@ -1,0 +1,97 @@
+
+<section class="our-standards" style=" background-image: url('{{ section.settings.bg_image | img_url: '1200x'}}');
+background-position: center;
+background-repeat: no-repeat;
+height: 100%;
+background-size: cover;">
+
+    <div class="collection-title">
+        <h2>{{section.settings.standards_heading}}</h2>
+        <span>{{section.settings.standards_subheading}}</span>
+    </div>
+    <div class="standards">
+        {% for block in section.blocks %}
+        <div class="icon-box" >
+            {% if block.settings.standards_image != blank %}
+        <img src="{{ block.settings.standards_image | img_url }}">
+        {% else %}
+        <img src=" {{ 'truck.png' | asset_url }}">
+        {% endif %}
+        <h2>{{ block.settings.standards_title}}</h2>
+        <p>{{ block.settings.standards_p}}</p>
+        </div>
+        {% endfor%}
+        </div>
+</section>
+
+
+
+
+{% schema %}
+{
+  "name": "Icons and Text",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "standards_heading",
+      "label": "Heading 1",
+      "default": "Our Standards"
+    },
+    {
+        "type": "text",
+        "id": "standards_subheading",
+        "label": "Heading 2",
+        "default": "Values"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Custom Background Image"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Column",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "standards_image",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "standards_title",
+          "label": "Add a Title or Tagline",
+          "default": "Add a Title or Tagline"
+        },
+        {
+          "type": "richtext",
+          "id": "standards_p",
+          "label": "Text",
+          "default": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>" 
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Company Standards",
+      "category": "text",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,92 @@
+<style>
+  .faq .tab-label {
+      background-color: {{section.settings.faq_bg_question}};
+      display: flex;
+      justify-content: space-between;
+    padding: 1rem;
+      font-weight: bold;
+    color: {{section.settings.faq_font_color}};
+  }
+  .faq .tab-content {
+      background: {{section.settings.faq_bg_answer}};
+      max-height: 0px;
+      overflow: hidden;
+      transition: all .4s;
+      padding: 0 1rem;
+      color: {{section.settings.faq_answer_color}};
+  }
+  .faq .tab-label:hover {
+      background: {{section.settings.faq_bg_question | color_darken: 10}};
+  }
+  .faq .tab-toggle:checked ~ .tab-label {
+      background: {{section.settings.faq_bg_question | color_darken: 10}};
+  }
+  
+  
+  </style>
+
+  <div class="faq">
+    {% for block in section.blocks %}
+  
+      <div class="tab">
+          <input type="checkbox" id="tab{{forloop.index}}" class="tab-toggle">
+          <label for="tab{{forloop.index}}" class="tab-label">{{ block.settings.faq }}</label>
+          <div class="tab-content" >{{ block.settings.faq_answer }}</div>
+      </div>
+      {% endfor %}
+  </div>
+ 
+  
+  {% schema %}
+  {
+      "name": "FAQ's",
+      "settings": [
+      {
+        "type": "color",
+        "id": "faq_font_color",
+        "label": "Question Font Color",
+        "default": "#ffffff"
+     },
+      {
+        "type": "color",
+        "id": "faq_bg_question",
+        "label": "Question Background Color",
+        "default": "#0cdbdd"
+     },
+     {
+      "type": "color",
+      "id": "faq_answer_color",
+      "label": "Answer Font Color",
+      "default": "#ffffff"
+   },
+     {
+      "type": "color",
+      "id": "faq_bg_answer",
+      "label": "Answer Background Color",
+      "default": "#1b1b1b"
+   }
+     ],
+      "blocks": [
+      {
+        "type": "text",
+        "name": "Question/Answer",
+        "limit": 10,
+      "settings": [
+      
+        {
+          "id": "faq",
+          "type": "text",
+          "label": "The Question",
+          "default": "What is your return policy?"
+        },
+        {
+          "id": "faq_answer",
+          "type": "textarea",
+          "label": "The FAQ Answer",
+          "default": "We have a 30 day return policy on all items with tags."
+        }
+      ]
+    }
+      ]  
+   }
+   {% endschema %}

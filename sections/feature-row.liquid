@@ -1,0 +1,72 @@
+<section class="specials" style="background-image: url('{{ section.settings.bg_image | img_url: '1200x'}}');
+background-position: center;
+background-repeat: no-repeat;
+height: 100%;
+background-size: cover;">
+  <div class="artwork">
+    {%- if block.settings.special_img != blank -%}
+      <img src=" {{ section.settings.special_image | img_url: '300x' }}">
+      {% else %}
+      <img src="{{ 'special.gif' | asset_url }}">
+      {% endif %}
+      </div>
+  <div class="new-product">
+     <h2>{{ section.settings.special_title }}</h2>
+     <p>{{ section.settings.special_text }}</p>
+     <a href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+      </div>
+
+
+</div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Image And Text",
+  "settings": [
+  {
+    "type": "image_picker",
+    "id": "bg_image",
+    "label": "Select a Background Image"
+  },
+    {
+      "type": "image_picker",
+      "id": "special_image",
+      "label": "Select an Image"
+    },
+    {
+      "type": "text",
+      "id": "special_title",
+      "label": "Title or Tagline",
+      "default": "New Hair Oil"
+    },
+    {
+      "type": "richtext",
+      "id": "special_text",
+      "label": "Paragraph Text",
+      "default": {
+        "en": "<p>Made to give your hair all the care it needs, our new product combines the best quality ingredients. Give your hair a treatment it deserves and enjoy a new, fresh look.</p>"   
+      }
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Shop Now",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image With Text",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

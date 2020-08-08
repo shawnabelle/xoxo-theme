@@ -1,0 +1,636 @@
+//GSAP Header and Hero
+let headerTL = gsap.timeline();
+headerTL
+.fromTo(
+  'header .wrapper',
+  {
+      opacity: 0,
+      backgroundColor: "black"
+  },
+  {
+      opacity: 1,
+      duration: 2 
+  }
+)
+.fromTo(
+  'header .middle',
+  {
+      y: -200,
+      opacity: 0
+  },
+  {
+      y: 0,
+      opacity: 1,
+      duration: 1.2
+  }
+)
+.fromTo(
+  'header .right',
+  {
+      x: 200,
+      opacity: 0
+  },
+  {
+      x: 0,
+      opacity: 1,
+      duration: 1.2
+  },
+  '>-1.3'
+)
+.fromTo(
+  'header .left',
+  {
+      x: -200,
+      opacity: 0
+  },
+  {
+      x: 0,
+      opacity: 1,
+      duration: 1.2
+  },
+  '>-1.3'
+)
+
+
+.fromTo(
+    '.bottom-nav',
+    {
+        y: 200,
+        opacity: 0
+    },
+    {
+      y: 0,
+        opacity: 1,
+        duration: 1.5
+    },
+    '>-1.2'
+)
+
+// .fromTo(
+//     '.swiper-container .hero',
+//     {
+//         x: 0,
+//         opacity: 0
+//     },
+//     {
+//         x: (window.innerWidth * .15),
+//         opacity: 1,
+//         duration: 1
+//     },
+//     '>-.6'
+// )
+
+.fromTo(
+    '.slider-text h1',
+    {
+        x: "100%"
+    },
+    {
+        x: 0,
+        duration: 1
+    },
+    '>-.8'
+).fromTo(
+    '.slider-text p',
+    {
+        x: "-100%"
+    },
+    {
+        x: 0,
+        duration: 1
+    },
+    '>-.8'
+).fromTo(
+    '.slider-text a',
+    {
+        y: "-100%",
+        opacity: 0
+    },
+    {
+        y: 0,
+        opacity: 1
+    },
+    '>-.9'
+)
+
+
+/* Specials Scroll Animations */
+const specialsTL = gsap.timeline()
+specialsTL
+.fromTo(
+  '.specials .artwork',
+  {
+    x: -300,
+    opacity: 0
+},
+{
+    x: 0,
+    opacity: 1,
+    duration: 1
+}
+).fromTo(
+    '.specials .new-product',
+    {
+      opacity: 0,
+      x: 300
+   },
+   {
+       opacity: 1,
+       x: 0,
+       duration: 1
+   }
+)
+
+let homeController = new ScrollMagic.Controller();
+
+let specialsScene = new ScrollMagic.Scene({
+triggerElement: ".specials",
+triggerHook: 1,
+reverse: false,
+offset: 0,
+duration: 0
+})
+.setTween(specialsTL)
+.addTo(homeController)
+
+
+
+/* Collections Scroll Animations */
+const collectionTL = gsap.timeline()
+collectionTL
+.fromTo(
+  '.collections .collection-title h2',
+  {
+     opacity: 0,
+     y: -200
+  
+  },
+  {
+      opacity: 1,
+      y: 0,
+      duration: .4
+  }
+).fromTo(
+    '.collections .collection-title span',
+    {
+      opacity: 0,
+      x: -200
+   
+   },
+   {
+       opacity: .2,
+       x: 0,
+       duration: 1
+   } ,
+'>.5'
+)
+.fromTo(
+  '.collections .gallery-item',
+  {
+     opacity: 0,
+     y: 100
+  
+  },
+  {
+      opacity: 1,
+      stagger: .3,
+      y: 0
+  }
+).fromTo(
+    '.collections .collections-text',
+    {
+      opacity: 0,
+      y: 100
+   
+   },
+   {
+       opacity: 1,
+       stagger: .2,
+       y: 0
+   }
+)
+
+
+
+let collectionScene = new ScrollMagic.Scene({
+triggerElement: ".collections",
+triggerHook: 1,
+reverse: false,
+offset: 100,
+duration: 0
+})
+.setTween(collectionTL)
+.addTo(homeController)
+
+/* Our Standards Animations */
+const standardsTL = gsap.timeline()
+standardsTL
+.fromTo(
+  '.our-standards .collection-title h2',
+  {
+     opacity: 0,
+     y: -200
+  
+  },
+  {
+      opacity: 1,
+      y: 0,
+      duration: .4
+  }
+).fromTo(
+    '.our-standards .collection-title span',
+    {
+      opacity: 0,
+      x: -200
+   
+   },
+   {
+       opacity: .2,
+       x: 0,
+       duration: 1
+   } ,
+'>.5'
+)
+.fromTo(
+  '.our-standards .standards .icon-box',
+  {
+    opacity: 0,
+    y: 200
+ 
+ },
+ {
+  opacity: 1,
+  stagger: .3,
+  y: 0,
+  duration: .3
+ },
+ '>-1'
+)
+
+
+
+
+let standardsScene = new ScrollMagic.Scene({
+triggerElement: ".standards",
+triggerHook: 1,
+reverse: false,
+offset: 100,
+duration: 0
+})
+.setTween(standardsTL)
+.addTo(homeController)
+
+/* Featured Products Animations */
+const productsTL = gsap.timeline()
+productsTL
+.fromTo(
+  '.collection-title h2',
+  {
+     opacity: 0,
+     y: -200
+  
+  },
+  {
+      opacity: 1,
+      y: 0,
+      duration: .4
+  }
+).fromTo(
+    '.collection-title span',
+    {
+      opacity: 0,
+      x: -200
+   
+   },
+   {
+       opacity: .2,
+       x: 0,
+       duration: 1
+   } ,
+'>.5'
+)
+.fromTo(
+    '#products-group .product-bg',
+    {
+       opacity: 0,
+       x: 100
+    
+    },
+    {
+        opacity: 1,
+        stagger: .3,
+        x: 0,
+        duration: .3
+    }
+)
+
+let productsScene = new ScrollMagic.Scene({
+triggerElement: "#products-group",
+triggerHook: 1,
+reverse: false,
+offset:  100,
+duration: 0
+})
+.setTween(productsTL)
+.addTo(homeController)
+
+
+/* Best Sellers Animations */
+const saleTL = gsap.timeline()
+saleTL
+.fromTo(
+  '.sale-promo',
+  {
+     opacity: 0,
+     y: -200
+  
+  },
+  {
+      opacity: 1,
+      y: 0,
+      duration: .5
+  }
+).fromTo(
+  '.sale-promo a',
+  {
+     opacity: 0,
+     y: 300
+  
+  },
+  {
+      opacity: 1,
+      y: 0,
+      duration: .5
+  }
+)
+
+let saleScene = new ScrollMagic.Scene({
+triggerElement: ".sale-promo",
+triggerHook: 1,
+reverse: false,
+offset:  200,
+duration: 0
+})
+.setTween(saleTL)
+.addTo(homeController)
+
+/* Brands Animations */
+const brandsTL = gsap.timeline()
+brandsTL
+.fromTo(
+  '.brand-logos .collection-title h2',
+  {
+     opacity: 0,
+     y: -200
+  
+  },
+  {
+      opacity: 1,
+      y: 0,
+      duration: .4
+  }
+).fromTo(
+    '.brand-logos .collection-title span',
+    {
+      opacity: 0,
+      x: -200
+   
+   },
+   {
+       opacity: .2,
+       x: 0,
+       duration: 1
+   } ,
+'>.5'
+).fromTo(
+  '.brand-logos .customer-logos',
+  {
+    opacity: 0,
+    y: -200
+ 
+ },
+ {
+     opacity: 1,
+     y: 0,
+     duration: 1
+ }
+)
+
+
+
+
+let brandScene = new ScrollMagic.Scene({
+triggerElement: ".brand-logos",
+triggerHook: 1,
+reverse: false,
+offset: 100,
+duration: 0
+})
+.setTween(brandsTL)
+.addTo(homeController)
+
+
+/* Newsletter Animations */
+const newsletterTL = gsap.timeline()
+newsletterTL
+.fromTo(
+  '.newsletter .collection-title h2',
+  {
+     opacity: 0,
+     y: -200
+  
+  },
+  {
+      opacity: 1,
+      y: 0,
+      duration: .4
+  }
+).fromTo(
+    '.newsletter .collection-title span',
+    {
+      opacity: 0,
+      x: -200
+   
+   },
+   {
+       opacity: .2,
+       x: 0,
+       duration: 1
+   } ,
+'>.5'
+).fromTo(
+  '.newsletter p',
+  {
+    opacity: 0,
+    y: -200
+ 
+ },
+ {
+     opacity: 1,
+     y: 0,
+     duration: 1
+ }
+)
+.fromTo(
+  '.newsletter form',
+  {
+    opacity: 0,
+    y: 200
+ 
+ },
+ {
+     opacity: 1,
+     y: 0,
+     duration: 1
+ }
+)
+
+
+
+
+let newsletterScene = new ScrollMagic.Scene({
+triggerElement: ".newsletter",
+triggerHook: 1,
+reverse: false,
+offset: 100,
+duration: 0
+})
+.setTween(newsletterTL)
+.addTo(homeController)
+
+
+
+
+/* Blog Animations */
+const blogTL = gsap.timeline()
+blogTL
+.fromTo(
+  '.news .collection-title h2',
+  {
+     opacity: 0,
+     y: -200
+  
+  },
+  {
+      opacity: 1,
+      y: 0,
+      duration: .4
+  }
+).fromTo(
+    '.news .collection-title span',
+    {
+      opacity: 0,
+      x: -200
+   
+   },
+   {
+       opacity: .2,
+       x: 0,
+       duration: 1
+   } ,
+'>.5'
+)
+.fromTo(
+  '.news figure',
+  {
+    opacity: 0,
+    y: 100
+ 
+ },
+ {
+     opacity: 1,
+     stagger: .3,
+     y: 0,
+     duration: .3
+ }
+)
+
+
+
+
+let blogScene = new ScrollMagic.Scene({
+triggerElement: ".news",
+triggerHook: 1,
+reverse: false,
+offset: 100,
+duration: 0
+})
+.setTween(blogTL)
+.addTo(homeController)
+
+/* Footer Animations */
+const footerTL = gsap.timeline()
+footerTL
+.fromTo(
+    'footer .footer-fade-in',
+    {
+       opacity: 0,
+       y: 100
+    
+    },
+    {
+        opacity: 1,
+        stagger: .3,
+        y: 0,
+        duration: .3
+    }
+)
+
+let footerScene = new ScrollMagic.Scene({
+triggerElement: "footer",
+triggerHook: 1,
+reverse: false,
+offset:  0,
+duration: 0
+})
+.setTween(footerTL)
+.addTo(homeController)
+
+//Swiper JS Hero
+
+var mySwiper = new Swiper('.hero', {
+    // Parameters
+    effect: 'flip',
+    grabCursor: true,
+    autoplay: {
+        delay: 5000,
+      },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true
+    },
+   
+  })
+
+
+  //Blog Animations
+  $(".hover").mouseleave(
+    function() {
+      $(this).removeClass("hover");
+    }
+  );
+
+//Brand Logos Animation Slider
+  $(document).ready(function(){
+    $('.customer-logos .slider ').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 2
+            }
+        }]
+    });
+});
+

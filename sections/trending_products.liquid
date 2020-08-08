@@ -1,0 +1,71 @@
+{%- assign collection = collections[section.settings.collection] -%}
+
+<section id="products-group">
+    <div class="collection-title">
+        <h2>{{section.settings.products_heading}}</h2>
+        <span>{{section.settings.products_subheading}}</span>
+    </div>
+    <div class="container">
+    <div class="row">
+        {% for product in collection.products limit: section.settings.max_products %}
+        <div class="col-md-6 col-lg-4">
+            <a href="{{product.url}}" class="product-bg">
+                <img src="{{ product.featured_image | img_url: '400x'}}" class="product-img">
+                <div class="overlay">
+                    <span class="product-title">{{product.title}}</span>
+                    <span class="product-price">{{product.price | money_with_currency }}</span>
+                </div>
+            </a>
+     
+        </div>
+        {% endfor %}
+       
+       
+     
+    </div>
+</div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Trending Products Group",
+  "class": "index-section",
+ 
+
+  "settings": [
+  {
+    "type": "text",
+    "id": "products_heading",
+    "label": "Heading 1",
+    "default": "Hot This Week"
+  },
+  {
+      "type": "text",
+      "id": "products_subheading",
+      "label": "Heading 2",
+      "default": "Trending"
+    },
+    {
+      "type":      "collection",
+      "id":        "collection",
+      "label":     "Collection Display",
+      "info":      "Chose a collection to showcase trending products"
+   },
+   {
+    "type": "text",
+    "id": "max_products",
+    "default": "3",
+    "label": "Maximum Number of Products"
+ }
+  ],
+  "presets": [
+    {
+      "name": "Trending Products Group",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,150 @@
+{%- assign blog = blogs[section.settings.blog] -%}
+
+{% paginate blog.articles by 12 %}
+
+
+
+<section class="news">
+  <div class="collection-title">
+      <h2>{{section.settings.blog_heading}}</h2>
+      <span>{{section.settings.blog_subheading}}</span>
+  </div>
+{%- for article in blog.articles limit: section.settings.post_limit -%} 
+{%- if blog.articles != blank -%}
+ <figure class="blog-post hover">
+    <div class="image"> {%- if article.image -%}
+    {{ article | img_url: '600x', scale: 2 | img_tag: '' }}
+  {%- endif -%}
+  </div>
+    <figcaption>
+
+      <div class="date">
+
+      <span class="day">{{ article.published_at | time_tag:'%d' }} </span><span class="month">{{ article.published_at | time_tag:'%b' }}</span>
+ 
+      </div>
+      <h3> {{ article.title }}</h3>
+      <p>
+      {% if article.excerpt.size > 0 %}
+      {{ article.excerpt }}
+    {% else %}
+      {{ article.content | truncate: 150 }}
+    {% endif %}
+      </p>
+    </figcaption>
+    <a href="{{ article.url }}"></a>
+    
+  </figure>
+
+  {% else %}
+
+  <figure class="blog-post">
+    <div class="image"><img src="https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="pr-sample23" /></div>
+    <figcaption>
+      <div class="date"><span class="day">2</span><span class="month">April</span></div>
+      <h3>Top 10 Skincare Habits</h3>
+      <p>
+          Skin is bombarded by outside forces every day. Sun damage, harsh weather, rough cleansers, and even stress can contribute to aging skin. But you can fight back. 
+      </p>
+    </figcaption>
+    <a href="#"></a>
+  </figure>
+  <figure class="blog-post hover">
+    <div class="image"><img src="https://images.pexels.com/photos/3812041/pexels-photo-3812041.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="pr-sample24" /></div>
+    <figcaption>
+      <div class="date"><span class="day">11</span><span class="month">May</span></div>
+      <h3>Choosing Your Foundation</h3>
+      <p>
+Using the appropriate skincare will keep your skin healthy and counteract dryness or oiliness, and help your skin stay well balanced.
+      </p>
+    </figcaption>
+    <a href="#"></a>
+  </figure>
+  <figure class="blog-post">
+    <div class="image"><img src="makeup.png" alt="pr-sample25" /></div>
+    <figcaption>
+      <div class="date"><span class="day">23</span><span class="month">July</span></div>
+      <h3>Vibrant Makeup Looks</h3>
+      <p>
+  
+For some women, vibrant makeup shouts their confidence and good mood out to the world; for others, it provides a beautiful medium with which to paint beauty and creativity.
+      </p>
+    </figcaption>
+    <a href="#"></a>
+  </figure>
+  {% endif%}
+  {% endfor %}
+
+
+  
+
+  </section>
+  {%- if section.settings.show_view_all -%}
+  <div class="blog-btn
+  "><a href="{{ blog.url }}"
+    class="view-btn"
+    aria-label="{{ 'blogs.article.view_all_blogs' }}">
+    View All
+  </a></div>
+{%- endif -%}
+  
+
+{%- if paginate.pages > 1 -%}
+  {% include 'pagination', paginate: paginate %}
+{%- endif -%}
+
+{% endpaginate %}
+
+
+  {% schema %}
+{
+  "name": "Company News",
+  "settings": [
+    {
+      "type": "text",
+      "id": "blog_heading",
+      "label": "Heading 1",
+      "default": "Company News"
+    },
+    {
+        "type": "text",
+        "id": "blog_subheading",
+        "label": "Heading 2",
+        "default": "Blog"
+      },
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Blog to feature on the home page"
+     },
+     {
+      "type": "range",
+      "id": "post_limit",
+      "label": "Posts",
+      "min": 3,
+      "max": 12,
+      "step": 3,
+      "default": 3
+    },
+   
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View all' button",
+      "default": false
+    }
+ 
+  ],
+ 
+  "presets": [
+  {
+    "name": "Company News",
+    "category": "Blog",
+    "settings": {
+      "blog": "News",
+      "post_limit": 3
+    }
+  }
+]
+}
+{% endschema %}

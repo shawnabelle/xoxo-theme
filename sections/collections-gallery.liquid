@@ -1,0 +1,175 @@
+
+{%- assign collection1 = collections[section.settings.collection1] -%}
+{%- assign collection2 = collections[section.settings.collection2] -%}
+{%- assign collection3 = collections[section.settings.collection3] -%}
+{%- assign collection4 = collections[section.settings.collection4] -%}
+{%- assign collection5 = collections[section.settings.collection5] -%}
+
+<section class="collections">
+    <div class="collection-title">
+        <h2>{{section.settings.gallery_heading}}</h2> 
+        <span>{{section.settings.gallery_subheading}}</span>
+    </div>
+
+
+      <div class="collections-container">
+    
+          <div class="collections-gallery w-1 h-4">
+              <div class="gallery-item">
+              <div class="image">
+                {%- if collection1.image != blank -%}
+                <img src="{{ collection1.image | img_url: '600x'}}">  
+      
+                  {% else %}
+                  <img src="https://images.pexels.com/photos/1125328/pexels-photo-1125328.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                  {% endif %}
+              </div>
+              {%- if collection1.title != blank -%}
+              <div class="collections-text"><a href="{{collection1.url}}">{{collection1.title}}</a></div>
+              {% else %}
+              <div class="collections-text"><a href="#">Eyes</a></div>
+              {% endif %}
+          </div>
+        </div>
+    
+     
+    
+          <div class="collections-gallery w-2 h-3">
+            <div class="gallery-item">
+            <div class="image">
+            {%- if collection2.image != blank -%}
+            <img src="{{collection2.image | img_url: '600x'}}">  
+  
+              {% else %}
+                <img src="https://images.pexels.com/photos/3852138/pexels-photo-3852138.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                {% endif %}
+                </div>
+                {%- if collection2.title != blank -%}
+                <div class="collections-text"><a href="{{collection2.url}}">{{collection2.title}}</a></div>
+                {% else %}
+            <div class="collections-text"><a href="#">Skin</a></div>
+            {% endif %}
+        </div>
+          </div>
+    
+          <div class="collections-gallery w-4 h-1">
+            <div class="gallery-item">
+            <div class="image">
+            {%- if collection3.image != blank -%}
+            <img src="{{collection3.image | img_url: '600x'}}">  
+  
+              {% else %}
+                <img src="https://images.pexels.com/photos/2661256/pexels-photo-2661256.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                {% endif %}
+                </div>
+                {%- if collection3.title != blank -%}
+                <div class="collections-text"><a href="{{collection3.url}}">{{collection3.title}}</a></div>
+                {% else %}
+            <div class="collections-text"><a href="#">Face</a></div>
+            {% endif %}
+        </div>
+          </div>
+    
+          <div class="collections-gallery w-2 h-3">
+            <div class="gallery-item">
+            <div class="image">
+            {%- if collection4.image != blank -%}
+            <img src="{{collection4.image | img_url: '600x'}}">  
+  
+              {% else %}
+                <img src="https://images.pexels.com/photos/922532/pexels-photo-922532.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                {% endif %}
+                </div>
+                {%- if collection1.title != blank -%}
+                <div class="collections-text"><a href="{{collection4.url}}">{{collection4.title}}</a></div>
+                {% else %}
+            <div class="collections-text"><a href="#">Lips</a></div>
+            {% endif %}
+        </div>
+          </div>
+
+          <div class="collections-gallery w-1 h-4">
+            <div class="gallery-item">
+            <div class="image">
+            {%- if collection5.image != blank -%}
+            <img src="{{collection5.image | img_url: '600x'}}">  
+  
+              {% else %}
+                <img src="https://images.pexels.com/photos/1994818/pexels-photo-1994818.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                {% endif %}
+                </div>
+                {%- if collection5.title != blank -%}
+                <div class="collections-text"><a href="{{collection5.url}}">{{collection5.title}}</a></div>
+                {% else %}
+            <div class="collections-text"><a href="#">Hair</a></div>
+            {% endif %}
+        </div>
+          </div>
+      
+     
+          </div>
+        </section>
+
+
+
+        {% schema %}
+{
+  "name": "Collection Gallery",
+  "class": "index-section",
+  "settings": [
+  {
+    "type": "text",
+    "id": "gallery_heading",
+    "label": "Heading 1",
+    "default": "Popular Collections"
+  },
+  {
+      "type": "text",
+      "id": "gallery_subheading",
+      "label": "Heading 2",
+      "default": "Beauty"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Custom Background Image"
+    },
+    {
+      "type":      "collection",
+      "id":        "collection1",
+      "label":     "Collection 1",
+      "info":      "Chose a collection to showcase products"
+   },
+   {
+    "type":      "collection",
+    "id":        "collection2",
+    "label":     "Collection 2",
+    "info":      "Chose a collection to showcase products"
+ },
+ {
+  "type":      "collection",
+  "id":        "collection3",
+  "label":     "Collection 3",
+  "info":      "Chose a collection to showcase products"
+},
+{
+"type":      "collection",
+"id":        "collection4",
+"label":     "Collection 4",
+"info":      "Chose a collection to showcase products"
+},
+{
+"type":      "collection",
+"id":        "collection5",
+"label":     "Collection 5",
+"info":      "Chose a collection to showcase products"
+}
+  ],
+  "presets": [
+    {
+      "name": "Collections Gallery",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
