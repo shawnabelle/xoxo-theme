@@ -4153,9 +4153,14 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   left: 0;
   background-color: $color-image-overlay;
   opacity: $opacity-image-overlay;
+
 }
 
+{% assign subheading_font = settings.type_section_subheading_font %};
+{{ subheading_font | font_face }}
+
 .collection-hero__title {
+  font-family:  {{ subheading_font.family }}, 'Kaushan Script', 'Source Sans Pro', Arial, Helvetica, sans-serif;
   position: absolute;
   color: $color-overlay-title-text;
   width: 100%;
@@ -4163,6 +4168,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   left: 0;
   right: 0;
   top: 50%;
+  text-transform: capitalize;
   @include transform(translateY(-50%));
 
   @include media-query($medium-up) {
@@ -7961,6 +7967,7 @@ $toolbar-height-small: 46px;
 }
 
 .collection-grid-item__title {
+  font-family:  {{ subheading_font.family }}, 'Kaushan Script', 'Source Sans Pro', Arial, Helvetica, sans-serif;
   color: $color-overlay-title-text;
   position: absolute;
   text-align: center;

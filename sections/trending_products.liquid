@@ -9,6 +9,7 @@
     <div class="row">
         {% for product in collection.products limit: section.settings.max_products %}
         <div class="col-md-6 col-lg-4">
+          {% if collection != blank %}
             <a href="{{product.url}}" class="product-bg">
                 <img src="{{ product.featured_image | img_url: '400x'}}" class="product-img">
                 <div class="overlay">
@@ -16,8 +17,37 @@
                     <span class="product-price">{{product.price | money_with_currency }}</span>
                 </div>
             </a>
-     
         </div>
+        
+        {% else %}
+        <div class="col-md-6 col-lg-4">
+          <a href="#" class="product-bg">
+              <img src="{{ 'osea.png' | asset_url }}" class="product-img">
+              <div class="overlay">
+                  <span class="product-title">Essential Hydrating Oil</span>
+                  <span class="product-price">$ 68.00</span>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-6 col-lg-4">
+          <a href="#" class="product-bg">
+              <img src="{{ 'momi.png' | asset_url }}" class="product-img">
+              <div class="overlay">
+                  <span class="product-title">Shampoo — Strengthen & Restore</span>
+                  <span class="product-price">$33</span>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-6 col-lg-4">
+          <a href="#" class="product-bg">
+              <img src="{{ 'kahina.png' | asset_url }}" class="product-img">
+              <div class="overlay">
+                  <span class="product-title">Oil Cleanser</span>
+                  <span class="product-price">$59</span>
+              </div>
+          </a>
+      </div>
+        {% endif %}
         {% endfor %}
        
        

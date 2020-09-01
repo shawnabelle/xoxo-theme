@@ -10,9 +10,8 @@
       <span>{{section.settings.blog_subheading}}</span>
   </div>
 {%- for article in blog.articles limit: section.settings.post_limit -%} 
-{%- if blog != blank -%}
+{%- if blog.articles != blank -%}
  <figure class="blog-post hover">
- 
     <div class="image"> {%- if article.image -%}
     {{ article | img_url: '600x', scale: 2 | img_tag: '' }}
   {%- endif -%}

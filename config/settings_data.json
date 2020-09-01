@@ -6,9 +6,6 @@
     "highlight_color": "#ff13a7",
     "hero_title_color": "#ffffff",
     "hero_p_color": "#ffffff",
-    "button_font_color": "#ff13a7",
-    "button_bg_color": "#ffffff",
-    "button_border_color": "#ff13a7",
     "color_body_text": "#333232",
     "color_sale_text": "#d78282",
     "color_button": "#ff13a7",
@@ -26,7 +23,7 @@
     "type_header_base_size": 40,
     "type_base_font": "montserrat_n4",
     "type_base_size": 18,
-    "type_section_subheading_font": "alfie_n4",
+    "type_section_subheading_font": "sagrantino_n4",
     "type_section_subheading_size": 100,
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
@@ -42,7 +39,7 @@
     "social_tumblr_link": "",
     "social_snapchat_link": "",
     "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
-    "social_vimeo_link": "https:\/\/vimeo.com\/shopify",
+    "social_vimeo_link": "",
     "favicon": "shopify:\/\/shop_images\/logo2.png",
     "enable_ajax": true,
     "checkout_header_image": "",
@@ -59,6 +56,9 @@
     "checkout_accent_color": "#197bbd",
     "checkout_button_color": "#197bbd",
     "checkout_error_color": "#e32c2b",
+    "button_font_color": "#ff13a7",
+    "button_bg_color": "#ffffff",
+    "button_border_color": "#ff13a7",
     "header_border_color": "#ff13a7",
     "sections": {
       "header": {
@@ -107,7 +107,12 @@
           "hero_h1": "Summer Collection",
           "hero_p": "Check out hydrating collection for summer fun",
           "button_text": "Shop Now",
-          "button_link": "shopify:\/\/collections"
+          "button_link": "shopify:\/\/collections",
+          "hero_title_color": "#ffffff",
+          "hero_p_color": "#ffffff",
+          "button_font_color": "#ff13a7",
+          "button_bg_color": "#ffffff",
+          "button_border_color": "#ff13a7"
         }
       },
       "feature-columns": {
@@ -214,7 +219,7 @@
         "settings": {
           "products_heading": "Hot This Week",
           "products_subheading": "Trending",
-          "collection": "makeup",
+          "collection": "face",
           "max_products": "6"
         }
       },
@@ -321,7 +326,7 @@
             "type": "link_list",
             "settings": {
               "title": "Customer Care",
-              "menu": "main-menu"
+              "menu": "quick-links"
             }
           },
           "1598466999428": {
@@ -498,7 +503,12 @@
             "hero_h1": "Summer Collection",
             "hero_p": "Check out hydrating collection for summer fun",
             "button_text": "Shop Now",
-            "button_link": "shopify:\/\/collections"
+            "button_link": "shopify:\/\/collections",
+            "hero_title_color": "#ffffff",
+            "hero_p_color": "#ffffff",
+            "button_font_color": "#ff13a7",
+            "button_bg_color": "#ffffff",
+            "button_border_color": "#ff13a7"
           }
         },
         "feature-columns": {
@@ -605,7 +615,7 @@
           "settings": {
             "products_heading": "Hot This Week",
             "products_subheading": "Trending",
-            "collection": "makeup",
+            "collection": "face",
             "max_products": "6"
           }
         },
@@ -712,7 +722,7 @@
               "type": "link_list",
               "settings": {
                 "title": "Customer Care",
-                "menu": "main-menu"
+                "menu": "quick-links"
               }
             },
             "1598466999428": {
