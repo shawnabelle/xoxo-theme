@@ -107,12 +107,7 @@
           "hero_h1": "Summer Collection",
           "hero_p": "Check out hydrating collection for summer fun",
           "button_text": "Shop Now",
-          "button_link": "shopify:\/\/collections",
-          "hero_title_color": "#ffffff",
-          "hero_p_color": "#ffffff",
-          "button_font_color": "#ff13a7",
-          "button_bg_color": "#ffffff",
-          "button_border_color": "#ff13a7"
+          "button_link": "shopify:\/\/collections"
         }
       },
       "feature-columns": {
@@ -503,12 +498,7 @@
             "hero_h1": "Summer Collection",
             "hero_p": "Check out hydrating collection for summer fun",
             "button_text": "Shop Now",
-            "button_link": "shopify:\/\/collections",
-            "hero_title_color": "#ffffff",
-            "hero_p_color": "#ffffff",
-            "button_font_color": "#ff13a7",
-            "button_bg_color": "#ffffff",
-            "button_border_color": "#ff13a7"
+            "button_link": "shopify:\/\/collections"
           }
         },
         "feature-columns": {
