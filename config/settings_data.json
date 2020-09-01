@@ -1,17 +1,17 @@
 {
   "current": {
+    "color_text": "#3a3a3a",
     "header_links_color": "#3a3a3a",
     "header_logo_color": "#3a3a3a",
-    "header_border_color": "#ff13a7",
+    "highlight_color": "#ff13a7",
     "hero_title_color": "#ffffff",
     "hero_p_color": "#ffffff",
     "button_font_color": "#ff13a7",
     "button_bg_color": "#ffffff",
     "button_border_color": "#ff13a7",
-    "color_text": "#3a3a3a",
     "color_body_text": "#333232",
-    "color_sale_text": "#ea0606",
-    "color_button": "#3a3a3a",
+    "color_sale_text": "#d78282",
+    "color_button": "#ff13a7",
     "color_button_text": "#ffffff",
     "color_small_button_text_border": "#3a3a3a",
     "color_text_field_text": "#000000",
@@ -19,13 +19,15 @@
     "color_text_field": "#ffffff",
     "color_image_overlay_text": "#ffffff",
     "color_image_overlay": "#685858",
-    "image_overlay_opacity": 40,
+    "image_overlay_opacity": 30,
     "color_borders": "#ebebeb",
     "color_body_bg": "#ffffff",
     "type_header_font": "helvetica_n7",
-    "type_header_base_size": 26,
-    "type_base_font": "helvetica_n4",
-    "type_base_size": 15,
+    "type_header_base_size": 40,
+    "type_base_font": "montserrat_n4",
+    "type_base_size": 18,
+    "type_section_subheading_font": "alfie_n4",
+    "type_section_subheading_size": 100,
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
@@ -33,15 +35,15 @@
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": true,
-    "social_twitter_link": "",
-    "social_facebook_link": "",
-    "social_pinterest_link": "",
-    "social_instagram_link": "",
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_pinterest_link": "https:\/\/pinterest.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "",
-    "social_vimeo_link": "",
-    "favicon": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
+    "social_vimeo_link": "https:\/\/vimeo.com\/shopify",
+    "favicon": "shopify:\/\/shop_images\/logo2.png",
     "enable_ajax": true,
     "checkout_header_image": "",
     "checkout_logo_image": "",
@@ -57,13 +59,14 @@
     "checkout_accent_color": "#197bbd",
     "checkout_button_color": "#197bbd",
     "checkout_error_color": "#e32c2b",
+    "header_border_color": "#ff13a7",
     "sections": {
       "header": {
         "type": "header",
         "settings": {
           "align_logo": "left",
-          "logo": "",
-          "logo_max_width": 100,
+          "logo": "shopify:\/\/shop_images\/logo2.png",
+          "logo_max_width": 140,
           "main_linklist": "main-menu",
           "message": false,
           "home_page_only": true,
@@ -79,26 +82,32 @@
           "1595631113360": {
             "type": "image",
             "settings": {
-              "slider_image": "shopify:\/\/shop_images\/flower-makeup.png"
+              "slider_image": "shopify:\/\/shop_images\/friends-laughing-on-beach.jpg"
+            }
+          },
+          "1596322449429": {
+            "type": "image",
+            "settings": {
+              "slider_image": "shopify:\/\/shop_images\/long-curly-hair-and-dark-lipstick.jpg"
+            }
+          },
+          "1596322457724": {
+            "type": "image",
+            "settings": {
+              "slider_image": "shopify:\/\/shop_images\/hot-pink-fashion-model.jpg"
             }
           }
         },
         "block_order": [
-          "1595631113360"
+          "1595631113360",
+          "1596322449429",
+          "1596322457724"
         ],
         "settings": {
           "hero_h1": "Summer Collection",
-          "hero_p": "Check out hydrating collection for summer fun"
-        }
-      },
-      "collection-slider": {
-        "type": "collection-slider",
-        "settings": {
-          "title": "Featured collection slider",
-          "collection": "",
-          "grid": 3,
-          "show_vendor": false,
-          "show_view_all": false
+          "hero_p": "Check out hydrating collection for summer fun",
+          "button_text": "Shop Now",
+          "button_link": "shopify:\/\/collections"
         }
       },
       "feature-columns": {
@@ -148,72 +157,271 @@
           "align_text": "left"
         }
       },
-      "quotes": {
-        "type": "quotes",
+      "1595632993249": {
+        "type": "collections-gallery",
+        "settings": {
+          "gallery_heading": "Popular Collections",
+          "gallery_subheading": "Beauty",
+          "gallery_text": "#ffffff",
+          "collection1": "eyes",
+          "collection2": "skin",
+          "collection3": "face",
+          "collection4": "lips",
+          "collection5": "hair-care"
+        }
+      },
+      "1595642834091": {
+        "type": "about",
         "blocks": {
-          "quotes-0": {
-            "type": "quote",
+          "1595642834091-0": {
+            "type": "text_block",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
-              "author": "Author's name"
+              "standards_image": "shopify:\/\/shop_images\/truck.png",
+              "standards_title": "Add a Title or Tagline",
+              "standards_p": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>"
             }
           },
-          "quotes-1": {
-            "type": "quote",
+          "1595642834091-2": {
+            "type": "text_block",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
-              "author": "Author's name"
+              "standards_image": "shopify:\/\/shop_images\/vegan.png",
+              "standards_title": "Add a Title or Tagline",
+              "standards_p": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>"
             }
           },
-          "quotes-2": {
-            "type": "quote",
+          "1596326739691": {
+            "type": "text_block",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
-              "author": "Author's name"
+              "standards_image": "shopify:\/\/shop_images\/healthy-living_ad2110b4-c469-4f22-987f-3a2e0b1d2827.png",
+              "standards_title": "Add a Title or Tagline",
+              "standards_p": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>"
             }
           }
         },
         "block_order": [
-          "quotes-0",
-          "quotes-1",
-          "quotes-2"
+          "1595642834091-0",
+          "1595642834091-2",
+          "1596326739691"
         ],
         "settings": {
-          "title": ""
+          "standards_heading": "Our Standards",
+          "standards_subheading": "Values",
+          "bg_image": "shopify:\/\/shop_images\/marble.png"
+        }
+      },
+      "1595993495010": {
+        "type": "trending_products",
+        "settings": {
+          "products_heading": "Hot This Week",
+          "products_subheading": "Trending",
+          "collection": "makeup",
+          "max_products": "6"
+        }
+      },
+      "1596320237254": {
+        "type": "newsletter",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/marble.png",
+          "newsletter_heading": "Newsletter",
+          "newsletter_subheading": "Sign Up",
+          "newsletter_p": "<p>Register to our newsletter and don&rsquo;t miss anything, get early access to coupons and news.<\/p>"
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "list",
+          "blog_show_author": true,
+          "blog_show_date": true
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_author": true,
+          "blog_show_date": true,
+          "show_share_buttons": true
+        }
+      },
+      "1596604083172": {
+        "type": "blog-home",
+        "settings": {
+          "blog_heading": "Company News",
+          "blog_subheading": "Blog",
+          "blog": "news",
+          "post_limit": 3,
+          "show_view_all": true
+        }
+      },
+      "pagefaq": {
+        "type": "pagefaq",
+        "blocks": {
+          "1596604746374": {
+            "type": "text",
+            "settings": {
+              "faq": "What is your return policy?",
+              "faq_answer": "We have a 30 day return policy on all items with tags."
+            }
+          },
+          "1596604749322": {
+            "type": "text",
+            "settings": {
+              "faq": "What is your return policy?",
+              "faq_answer": "We have a 30 day return policy on all items with tags."
+            }
+          },
+          "1596604750390": {
+            "type": "text",
+            "settings": {
+              "faq": "What is your return policy?",
+              "faq_answer": "We have a 30 day return policy on all items with tags."
+            }
+          },
+          "1596604751410": {
+            "type": "text",
+            "settings": {
+              "faq": "What is your return policy?",
+              "faq_answer": "We have a 30 day return policy on all items with tags."
+            }
+          },
+          "1596604752310": {
+            "type": "text",
+            "settings": {
+              "faq": "What is your return policy?",
+              "faq_answer": "We have a 30 day return policy on all items with tags."
+            }
+          },
+          "1596604753283": {
+            "type": "text",
+            "settings": {
+              "faq": "What is your return policy?",
+              "faq_answer": "We have a 30 day return policy on all items with tags."
+            }
+          }
+        },
+        "block_order": [
+          "1596604746374",
+          "1596604749322",
+          "1596604750390",
+          "1596604751410",
+          "1596604752310",
+          "1596604753283"
+        ],
+        "settings": {
+          "faq_font_color": "#ffffff",
+          "faq_bg_question": "#ff13a7",
+          "faq_answer_color": "#ffffff",
+          "faq_bg_answer": "#1b1b1b"
         }
       },
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
+          "1596664378680": {
+            "type": "link_list",
+            "settings": {
+              "title": "Customer Care",
+              "menu": "main-menu"
+            }
+          },
+          "1598466999428": {
+            "type": "link_list",
+            "settings": {
+              "title": "Company Info",
+              "menu": "footer"
+            }
+          },
+          "1598470285513": {
             "type": "link_list",
             "settings": {
               "title": "Quick links",
               "menu": "footer"
             }
-          },
-          "footer-1": {
-            "type": "newsletter",
+          }
+        },
+        "block_order": [
+          "1596664378680",
+          "1598466999428",
+          "1598470285513"
+        ],
+        "settings": {
+          "color_footer_bg": "#ebebeb",
+          "color_footer_menu_links": "#494949",
+          "color_footer_text": "#ff13a7",
+          "footer_bottom_text": "1620 West Main Street, Los Angeles CA 91345"
+        }
+      },
+      "1596862243472": {
+        "type": "featured-brands",
+        "blocks": {
+          "1596862243472-0": {
+            "type": "image_block",
             "settings": {
-              "title": "Newsletter"
+              "logo_image": ""
+            }
+          },
+          "1596862243472-1": {
+            "type": "image_block",
+            "settings": {
+              "logo_image": ""
+            }
+          },
+          "1596862243472-2": {
+            "type": "image_block",
+            "settings": {
+              "logo_image": ""
+            }
+          },
+          "1596862243472-3": {
+            "type": "image_block",
+            "settings": {
+              "logo_image": ""
+            }
+          },
+          "1596862243472-4": {
+            "type": "image_block",
+            "settings": {
+              "logo_image": ""
             }
           }
         },
         "block_order": [
-          "footer-0",
-          "footer-1"
+          "1596862243472-0",
+          "1596862243472-1",
+          "1596862243472-2",
+          "1596862243472-3",
+          "1596862243472-4"
         ],
         "settings": {
-          "show_payment_icons": true,
-          "color_footer_bg": "#f6f6f6",
-          "color_footer_text": "#333232",
-          "show_locale_selector": true,
-          "show_currency_selector": true
+          "logo_heading": "Featured On",
+          "logo_subheading": "Media"
         }
       },
-      "1595631146766": {
-        "type": "feature-row",
+      "product-template": {
+        "type": "product-template",
         "settings": {
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "show_vendor": false
+        }
+      },
+      "1598728469264": {
+        "type": "specials-row",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/marble.png",
           "special_image": "",
           "special_title": "New Hair Oil",
           "special_text": "<p>Made to give your hair all the care it needs, our new product combines the best quality ingredients. Give your hair a treatment it deserves and enjoy a new, fresh look.<\/p>",
@@ -221,22 +429,24 @@
           "button_link": ""
         }
       },
-      "1595631237430": {
-        "type": "collection-slider",
+      "1598905622638": {
+        "type": "promo",
         "settings": {
-          "title": "Featured collection slider",
-          "collection": "makeup",
-          "grid": 3,
-          "show_vendor": false,
-          "show_view_all": false
+          "promo_image": "shopify:\/\/shop_images\/beauty-trends.jpg",
+          "button_link": "shopify:\/\/products\/baked-foundation"
         }
       }
     },
     "content_for_index": [
       "hero",
-      "1595631146766",
-      "1595631237430",
-      "quotes"
+      "1595632993249",
+      "1595642834091",
+      "1595993495010",
+      "1598728469264",
+      "1596862243472",
+      "1596320237254",
+      "1596604083172",
+      "1598905622638"
     ]
   },
   "presets": {
@@ -245,16 +455,50 @@
         "header": {
           "type": "header",
           "settings": {
+            "align_logo": "left",
+            "logo": "shopify:\/\/shop_images\/logo2.png",
+            "logo_max_width": 140,
+            "main_linklist": "main-menu",
+            "message": false,
+            "home_page_only": true,
+            "message_text": "Announce something here",
+            "message_link": "",
+            "color_bg": "#3a3a3a",
+            "color_text": "#ffffff"
           }
         },
-        "hero-1": {
+        "hero": {
           "type": "hero",
+          "blocks": {
+            "1595631113360": {
+              "type": "image",
+              "settings": {
+                "slider_image": "shopify:\/\/shop_images\/friends-laughing-on-beach.jpg"
+              }
+            },
+            "1596322449429": {
+              "type": "image",
+              "settings": {
+                "slider_image": "shopify:\/\/shop_images\/long-curly-hair-and-dark-lipstick.jpg"
+              }
+            },
+            "1596322457724": {
+              "type": "image",
+              "settings": {
+                "slider_image": "shopify:\/\/shop_images\/hot-pink-fashion-model.jpg"
+              }
+            }
+          },
+          "block_order": [
+            "1595631113360",
+            "1596322449429",
+            "1596322457724"
+          ],
           "settings": {
-          }
-        },
-        "feature-row": {
-          "type": "feature-row",
-          "settings": {
+            "hero_h1": "Summer Collection",
+            "hero_p": "Check out hydrating collection for summer fun",
+            "button_text": "Shop Now",
+            "button_link": "shopify:\/\/collections"
           }
         },
         "feature-columns": {
@@ -263,16 +507,34 @@
             "feature-columns-0": {
               "type": "text_block",
               "settings": {
+                "enable_image": true,
+                "image": "",
+                "title": "Add a title or tagline",
+                "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+                "button_label": "",
+                "button_link": ""
               }
             },
             "feature-columns-1": {
               "type": "text_block",
               "settings": {
+                "enable_image": true,
+                "image": "",
+                "title": "Add a title or tagline",
+                "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+                "button_label": "",
+                "button_link": ""
               }
             },
             "feature-columns-2": {
               "type": "text_block",
               "settings": {
+                "enable_image": true,
+                "image": "",
+                "title": "Add a title or tagline",
+                "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+                "button_label": "",
+                "button_link": ""
               }
             }
           },
@@ -282,106 +544,300 @@
             "feature-columns-2"
           ],
           "settings": {
-            "title": ""
+            "title": "",
+            "align_text": "left"
           }
         },
-        "collection": {
-          "type": "collection",
+        "1595632993249": {
+          "type": "collections-gallery",
           "settings": {
-            "grid": 4
+            "gallery_heading": "Popular Collections",
+            "gallery_subheading": "Beauty",
+            "gallery_text": "#ffffff",
+            "collection1": "eyes",
+            "collection2": "skin",
+            "collection3": "face",
+            "collection4": "lips",
+            "collection5": "hair-care"
           }
         },
-        "hero-2": {
-          "type": "hero",
-          "settings": {
-          }
-        },
-        "quotes": {
-          "type": "quotes",
+        "1595642834091": {
+          "type": "about",
           "blocks": {
-            "quotes-0": {
-              "type": "quote",
+            "1595642834091-0": {
+              "type": "text_block",
               "settings": {
+                "standards_image": "shopify:\/\/shop_images\/truck.png",
+                "standards_title": "Add a Title or Tagline",
+                "standards_p": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>"
               }
             },
-            "quotes-1": {
-              "type": "quote",
+            "1595642834091-2": {
+              "type": "text_block",
               "settings": {
+                "standards_image": "shopify:\/\/shop_images\/vegan.png",
+                "standards_title": "Add a Title or Tagline",
+                "standards_p": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>"
               }
             },
-            "quotes-2": {
-              "type": "quote",
+            "1596326739691": {
+              "type": "text_block",
               "settings": {
+                "standards_image": "shopify:\/\/shop_images\/healthy-living_ad2110b4-c469-4f22-987f-3a2e0b1d2827.png",
+                "standards_title": "Add a Title or Tagline",
+                "standards_p": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>"
               }
             }
           },
           "block_order": [
-            "quotes-0",
-            "quotes-1",
-            "quotes-2"
+            "1595642834091-0",
+            "1595642834091-2",
+            "1596326739691"
           ],
           "settings": {
-            "title": ""
+            "standards_heading": "Our Standards",
+            "standards_subheading": "Values",
+            "bg_image": "shopify:\/\/shop_images\/marble.png"
           }
         },
-        "image-bar": {
-          "type": "image-bar",
+        "1595993495010": {
+          "type": "trending_products",
+          "settings": {
+            "products_heading": "Hot This Week",
+            "products_subheading": "Trending",
+            "collection": "makeup",
+            "max_products": "6"
+          }
+        },
+        "1596320237254": {
+          "type": "newsletter",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/marble.png",
+            "newsletter_heading": "Newsletter",
+            "newsletter_subheading": "Sign Up",
+            "newsletter_p": "<p>Register to our newsletter and don&rsquo;t miss anything, get early access to coupons and news.<\/p>"
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "list",
+            "blog_show_author": true,
+            "blog_show_date": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "1596604083172": {
+          "type": "blog-home",
+          "settings": {
+            "blog_heading": "Company News",
+            "blog_subheading": "Blog",
+            "blog": "news",
+            "post_limit": 3,
+            "show_view_all": true
+          }
+        },
+        "pagefaq": {
+          "type": "pagefaq",
           "blocks": {
-            "image-bar-0": {
-              "type": "image",
+            "1596604746374": {
+              "type": "text",
               "settings": {
+                "faq": "What is your return policy?",
+                "faq_answer": "We have a 30 day return policy on all items with tags."
               }
             },
-            "image-bar-1": {
-              "type": "image",
+            "1596604749322": {
+              "type": "text",
               "settings": {
+                "faq": "What is your return policy?",
+                "faq_answer": "We have a 30 day return policy on all items with tags."
               }
             },
-            "image-bar-2": {
-              "type": "image",
+            "1596604750390": {
+              "type": "text",
               "settings": {
+                "faq": "What is your return policy?",
+                "faq_answer": "We have a 30 day return policy on all items with tags."
+              }
+            },
+            "1596604751410": {
+              "type": "text",
+              "settings": {
+                "faq": "What is your return policy?",
+                "faq_answer": "We have a 30 day return policy on all items with tags."
+              }
+            },
+            "1596604752310": {
+              "type": "text",
+              "settings": {
+                "faq": "What is your return policy?",
+                "faq_answer": "We have a 30 day return policy on all items with tags."
+              }
+            },
+            "1596604753283": {
+              "type": "text",
+              "settings": {
+                "faq": "What is your return policy?",
+                "faq_answer": "We have a 30 day return policy on all items with tags."
               }
             }
           },
           "block_order": [
-            "image-bar-0",
-            "image-bar-1",
-            "image-bar-2"
+            "1596604746374",
+            "1596604749322",
+            "1596604750390",
+            "1596604751410",
+            "1596604752310",
+            "1596604753283"
           ],
           "settings": {
+            "faq_font_color": "#ffffff",
+            "faq_bg_question": "#ff13a7",
+            "faq_answer_color": "#ffffff",
+            "faq_bg_answer": "#1b1b1b"
           }
         },
         "footer": {
           "type": "footer",
           "blocks": {
-            "footer-0": {
+            "1596664378680": {
               "type": "link_list",
               "settings": {
+                "title": "Customer Care",
+                "menu": "main-menu"
               }
             },
-            "footer-1": {
-              "type": "newsletter",
+            "1598466999428": {
+              "type": "link_list",
               "settings": {
+                "title": "Company Info",
+                "menu": "footer"
+              }
+            },
+            "1598470285513": {
+              "type": "link_list",
+              "settings": {
+                "title": "Quick links",
+                "menu": "footer"
               }
             }
           },
           "block_order": [
-            "footer-0",
-            "footer-1"
+            "1596664378680",
+            "1598466999428",
+            "1598470285513"
           ],
           "settings": {
-            "show_payment_icons": true
+            "color_footer_bg": "#ebebeb",
+            "color_footer_menu_links": "#494949",
+            "color_footer_text": "#ff13a7",
+            "footer_bottom_text": "1620 West Main Street, Los Angeles CA 91345"
+          }
+        },
+        "1596862243472": {
+          "type": "featured-brands",
+          "blocks": {
+            "1596862243472-0": {
+              "type": "image_block",
+              "settings": {
+                "logo_image": ""
+              }
+            },
+            "1596862243472-1": {
+              "type": "image_block",
+              "settings": {
+                "logo_image": ""
+              }
+            },
+            "1596862243472-2": {
+              "type": "image_block",
+              "settings": {
+                "logo_image": ""
+              }
+            },
+            "1596862243472-3": {
+              "type": "image_block",
+              "settings": {
+                "logo_image": ""
+              }
+            },
+            "1596862243472-4": {
+              "type": "image_block",
+              "settings": {
+                "logo_image": ""
+              }
+            }
+          },
+          "block_order": [
+            "1596862243472-0",
+            "1596862243472-1",
+            "1596862243472-2",
+            "1596862243472-3",
+            "1596862243472-4"
+          ],
+          "settings": {
+            "logo_heading": "Featured On",
+            "logo_subheading": "Media"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "enable_payment_button": true,
+            "show_share_buttons": true,
+            "media_size": "medium",
+            "enable_image_zoom": true,
+            "enable_video_looping": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "heading": "You may also like",
+            "show_vendor": false
+          }
+        },
+        "1598728469264": {
+          "type": "specials-row",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/marble.png",
+            "special_image": "",
+            "special_title": "New Hair Oil",
+            "special_text": "<p>Made to give your hair all the care it needs, our new product combines the best quality ingredients. Give your hair a treatment it deserves and enjoy a new, fresh look.<\/p>",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "1598905622638": {
+          "type": "promo",
+          "settings": {
+            "promo_image": "shopify:\/\/shop_images\/beauty-trends.jpg",
+            "button_link": "shopify:\/\/products\/baked-foundation"
           }
         }
       },
       "content_for_index": [
-        "hero-1",
-        "feature-row",
-        "feature-columns",
-        "collection",
-        "hero-2",
-        "quotes",
-        "image-bar"
+        "hero",
+        "1595632993249",
+        "1595642834091",
+        "1595993495010",
+        "1598728469264",
+        "1596862243472",
+        "1596320237254",
+        "1596604083172",
+        "1598905622638"
       ]
     },
     "Light": {
@@ -581,9 +1037,6 @@
         "blog-template": {
           "type": "blog-template",
           "settings": {
-            "layout": "grid",
-            "blog_show_author": true,
-            "blog_show_date": false
           }
         },
         "article-template": {
@@ -605,16 +1058,6 @@
           "blocks": {
             "link_list": {
               "type": "link_list",
-              "settings": {
-              }
-            },
-            "text": {
-              "type": "text",
-              "settings": {
-              }
-            },
-            "newsletter": {
-              "type": "newsletter",
               "settings": {
               }
             }

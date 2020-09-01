@@ -36,6 +36,31 @@
       },
       {
         "type": "color",
+        "id": "color_text",
+        "label": {
+          "da": "Overskrifter og links",
+          "de": "Titel und Links",
+          "en": "Headings and links",
+          "es": "Títulos y enlaces",
+          "fi": "Otsikot ja linkit",
+          "fr": "En-têtes et liens",
+          "hi": "शीर्षक और लिंक",
+          "it": "Titoli e link",
+          "ja": "見出しとリンク",
+          "ko": "제목 및 링크",
+          "nb": "Overskrifter og koblinger",
+          "nl": "Koppen en links",
+          "pt-BR": "Títulos e links",
+          "pt-PT": "Títulos e ligações",
+          "sv": "Rubriker och länkar",
+          "th": "หัวเรื่องและลิงก์",
+          "zh-CN": "标题和链接",
+          "zh-TW": "標題和連結"
+        },
+        "default": "#3a3a3a"
+      },
+      {
+        "type": "color",
         "id": "header_links_color",
         "label": "Header Menu Links Color",
         "default": "#ffffff"
@@ -73,46 +98,8 @@
         "default": "#ffffff"
       },
       {
-        "type": "color",
-        "id": "button_font_color",
-        "label": "Button Font Color",
-        "default": "#ff13a7"
-      },
-      {
-        "type": "color",
-        "id": "button_bg_color",
-        "label": "Button Background Color",
-        "default": "#ffffff"
-      },{
-        "type": "color",
-        "id": "button_border_color",
-        "label": "Button Border Color",
-        "default": "#ff13a7"
-      },
-      {
-        "type": "color",
-        "id": "color_text",
-        "label": {
-          "da": "Overskrifter og links",
-          "de": "Titel und Links",
-          "en": "Headings and links",
-          "es": "Títulos y enlaces",
-          "fi": "Otsikot ja linkit",
-          "fr": "En-têtes et liens",
-          "hi": "शीर्षक और लिंक",
-          "it": "Titoli e link",
-          "ja": "見出しとリンク",
-          "ko": "제목 및 링크",
-          "nb": "Overskrifter og koblinger",
-          "nl": "Koppen en links",
-          "pt-BR": "Títulos e links",
-          "pt-PT": "Títulos e ligações",
-          "sv": "Rubriker och länkar",
-          "th": "หัวเรื่องและลิงก์",
-          "zh-CN": "标题和链接",
-          "zh-TW": "標題和連結"
-        },
-        "default": "#3a3a3a"
+        "type": "header",
+        "content": "Body Section"
       },
       {
         "type": "color",
@@ -649,9 +636,9 @@
           "zh-CN": "标题基本尺寸",
           "zh-TW": "標題基本尺寸"
         },
-        "default": 26,
-        "min": 20,
-        "max": 36,
+        "default": 30,
+        "min": 25,
+        "max": 50,
         "step": 1,
         "unit": "px"
       },
@@ -726,7 +713,7 @@
           "zh-CN": "基本尺寸",
           "zh-TW": "基本尺寸"
         },
-        "default": 15,
+        "default": 16,
         "min": 14,
         "max": 20,
         "step": 1,
@@ -760,6 +747,35 @@
           "zh-TW": "字型"
         },
         "default": "sagrantino_n4"
+      },
+      {
+        "type": "range",
+        "id": "type_section_subheading_size",
+        "label": {
+          "da": "Basisstørrelse for overskrift",
+          "de": "Titelgröße",
+          "en": "Sub-Heading base size",
+          "es": "Tamaño base de título",
+          "fi": "Otsikon peruskoko",
+          "fr": "Dimensions de base de l'en-tête",
+          "hi": "शीर्षक के आधार का आकार",
+          "it": "Dimensione base del titolo",
+          "ja": "見出しの基本サイズ",
+          "ko": "제목 기본 크기",
+          "nb": "Grunnstørrelse for overskrift",
+          "nl": "Afmeting kopbasis",
+          "pt-BR": "Tamanho básico do título",
+          "pt-PT": "Tamanho básico do título",
+          "sv": "Rubrik basstorlek",
+          "th": "ขนาดพื้นฐานของหัวเรื่อง",
+          "zh-CN": "标题基本尺寸",
+          "zh-TW": "標題基本尺寸"
+        },
+        "default": 90,
+        "min": 80,
+        "max": 110,
+        "step": 1,
+        "unit": "px"
       }
     ]
   },

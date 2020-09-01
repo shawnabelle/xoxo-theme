@@ -1,11 +1,12 @@
 
-<section class="our-standards" style=" background-image: url('{{ section.settings.bg_image | img_url: '1200x'}}');
-background-position: center;
-background-repeat: no-repeat;
-height: 100%;
-background-size: cover;">
 
-    <div class="collection-title">
+<section class=" our-standards">
+  {% if section.settings.bg_image != blank %}
+  <div class="bg-image" style= "background: url('{{ section.settings.bg_image | img_url: '1200x' }}'); background-size: cover; background-position: center; background-repeat: no-repeat; "></div> 
+  {% else %}  
+  <div class="bg-image" style= " height: 100%;  "></div> 
+  {% endif %}
+  <div class="collection-title">
         <h2>{{section.settings.standards_heading}}</h2>
         <span>{{section.settings.standards_subheading}}</span>
     </div>
@@ -30,7 +31,7 @@ background-size: cover;">
 {% schema %}
 {
   "name": "Icons and Text",
-  "class": "index-section",
+
   "settings": [
     {
       "type": "text",

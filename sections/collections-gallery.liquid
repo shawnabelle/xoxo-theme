@@ -4,7 +4,11 @@
 {%- assign collection3 = collections[section.settings.collection3] -%}
 {%- assign collection4 = collections[section.settings.collection4] -%}
 {%- assign collection5 = collections[section.settings.collection5] -%}
-
+<style>
+  .gallery-item .collections-text a {
+    color: {{ section.settings.gallery_text }};
+  } 
+</style>
 <section class="collections">
     <div class="collection-title">
         <h2>{{section.settings.gallery_heading}}</h2> 
@@ -115,7 +119,6 @@
         {% schema %}
 {
   "name": "Collection Gallery",
-  "class": "index-section",
   "settings": [
   {
     "type": "text",
@@ -128,12 +131,13 @@
       "id": "gallery_subheading",
       "label": "Heading 2",
       "default": "Beauty"
-    },
+    }, 
     {
-      "type": "image_picker",
-      "id": "bg_image",
-      "label": "Custom Background Image"
-    },
+      "type": "color",
+      "id": "gallery_text",
+      "label": "Gallery Text",
+      "default": "#ffffff"
+    }, 
     {
       "type":      "collection",
       "id":        "collection1",

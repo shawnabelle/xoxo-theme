@@ -15,6 +15,53 @@
   <footer>
       <div class="container">
           <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+            <div class="col-md-6">
+              <div class="footer-menu footer-fade-in">
+                  <span class="menu-title">Subscribe</span>
+                  <p>Join our mailing list for coupons and discounts</p>
+                  {%- assign formId = 'Contact_' | append: section.id -%}
+                  {% form 'customer', id: formId, novalidate: 'novalidate', class: 'newsletter-form-footer' %}
+                  {%- if form.posted_successfully? -%}
+        <p class="form-message form-message--success" tabindex="-1" data-form-status>
+          {{ 'general.newsletter_form.confirmation' | t }}
+        </p>
+      {%- endif -%}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class=" {% if form.errors %} input-group--error{% endif %}">
+                      <input type="email"
+                      name="contact[email]"
+                      id="{{ formId }}-email"
+                      class="{% if form.errors %} input--error{% endif %}"
+                      value="{{ form.email }}"
+                      placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+                      aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+                      aria-required="true"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      {% if form.errors %}
+                        aria-invalid="true"
+                        aria-describedby="{{ formId }}-email-error"
+                        data-form-status
+                      {% endif %}>
+                      <button type="submit" class="button" name="commit"><i class="fas fa-paper-plane"></i>
+                      
+                      </button>
+                      {%- if form.errors contains 'email' -%}
+                      <span id="{{ formId }}-email-error" class="input-error-message">
+                        <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                        {% include 'icon-error' %}
+                        <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                      </span>
+                    {%- endif -%}
+                  {% endform %}
+              </div>
+          </div>
+            </div>
+            
+
+
               <div class="col-md-6">
                   <div class="row">
                       {% for block in section.blocks %}
@@ -33,7 +80,9 @@
                   {% endfor %}
               </div>
               </div>
-              <div class="col-md-6">
+            </div>
+            </div>
+              <div class="col-md-12">
                   <div class="footer-fade-in">
                       <div class="social-title">
                           Follow Us
@@ -82,7 +131,7 @@
           </div>
           <div class="row">
               <div class="col-sm-12 footer-fade-in">
-                  <hr>
+                  <!-- <hr> -->
                   <span class="address">{{section.settings.footer_bottom_text}}</span>
               </div>
           </div>
@@ -205,6 +254,7 @@
     "blocks": [
       {
         "type": "link_list",
+        "limit": 3,
         "name": {
           "da": "Menu",
           "de": "Menü",

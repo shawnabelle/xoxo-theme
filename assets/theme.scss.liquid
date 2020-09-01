@@ -1746,6 +1746,7 @@ symbol {
     height: auto;
     width: auto;
     margin: 0;
+    z-index: 9999999;
   }
 }
 
@@ -2578,6 +2579,7 @@ textarea {
   padding: 0;
   text-align: center;
   margin: 25px 0;
+  z-index: 99999;
 
   a {
     padding: 3px 10px;
@@ -2730,6 +2732,7 @@ textarea {
   transition: $transition-drawer;
   position: relative;
   overflow: hidden;
+
 
   @include media-query($medium-up) {
     // Prevent mobile menu inline styles from overriding desktop styles
@@ -4960,9 +4963,8 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   background-color: $color-btn-primary;
   color: $color-btn-primary-text;
   border-radius: 50%;
-  min-width: 1em;
-  height: 1em;
-
+  min-width: .8em;
+  height: .8em;
   span {
     font-family: $font-stack-cart-notification;
     font-size: calc(11em / 16);
@@ -4972,11 +4974,11 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 .site-header__cart-count {
   @include media-query($small) {
-    top: calc(7em / 16);
+    top: calc(3em / 16);
     right: 0;
     border-radius: 50%;
-    min-width: calc(19em / 16);
-    height: calc(19em / 16);
+    min-width: calc(15em / 16);
+    height: calc(15em / 16);
   }
 
   span {
@@ -5560,15 +5562,15 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   }
 
   .icon-facebook {
-    fill: $color-facebook;
+    // fill: $color-facebook;
   }
 
   .icon-twitter {
-    fill: $color-twitter;
+    // fill: $color-twitter;
   }
 
   .icon-pinterest {
-    fill: $color-pinterest;
+    // fill: $color-pinterest;
   }
 }
 
@@ -6121,6 +6123,7 @@ $nav-button-padding: 15px;
   display: block;
   @include transform(translate3d(0, 0, 0));
   transition: $transition-drawer;
+ 
 
   .sub-nav--is-open & {
     @include transform(translate3d(-100%, 0, 0));
@@ -6253,6 +6256,7 @@ $nav-button-padding: 15px;
   display: none;
   overflow: hidden;
   width: 100%;
+ 
 
   &::after {
     content: '';
@@ -6261,14 +6265,17 @@ $nav-button-padding: 15px;
     left: 0;
     right: 0;
     border-bottom: 1px solid $color-border;
+    
   }
 
   &.js-menu--is-open {
     display: block;
+   
   }
 }
 
 .mobile-nav--open {
+
   .icon-close {
     display: none;
   }
@@ -8706,4 +8713,7 @@ $min-height-disclosure: 92px;
     }
   }
 }
+
+
+
 

@@ -10,8 +10,9 @@
       <span>{{section.settings.blog_subheading}}</span>
   </div>
 {%- for article in blog.articles limit: section.settings.post_limit -%} 
-{%- if blog.articles != blank -%}
+{%- if blog != blank -%}
  <figure class="blog-post hover">
+ 
     <div class="image"> {%- if article.image -%}
     {{ article | img_url: '600x', scale: 2 | img_tag: '' }}
   {%- endif -%}
@@ -23,7 +24,7 @@
       <span class="day">{{ article.published_at | time_tag:'%d' }} </span><span class="month">{{ article.published_at | time_tag:'%b' }}</span>
  
       </div>
-      <h3> {{ article.title }}</h3>
+      <h3> {{ article.title | truncate: 25 }}</h3>
       <p>
       {% if article.excerpt.size > 0 %}
       {{ article.excerpt }}
@@ -38,8 +39,8 @@
 
   {% else %}
 
-  <figure class="blog-post">
-    <div class="image"><img src="https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="pr-sample23" /></div>
+  <figure class="blog-post hover">
+    <div class="image"><img src="https://images.pexels.com/photos/1029896/pexels-photo-1029896.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" /></div>
     <figcaption>
       <div class="date"><span class="day">2</span><span class="month">April</span></div>
       <h3>Top 10 Skincare Habits</h3>
@@ -50,7 +51,7 @@
     <a href="#"></a>
   </figure>
   <figure class="blog-post hover">
-    <div class="image"><img src="https://images.pexels.com/photos/3812041/pexels-photo-3812041.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="pr-sample24" /></div>
+    <div class="image"><img src="https://images.pexels.com/photos/3812041/pexels-photo-3812041.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" /></div>
     <figcaption>
       <div class="date"><span class="day">11</span><span class="month">May</span></div>
       <h3>Choosing Your Foundation</h3>
@@ -60,13 +61,12 @@ Using the appropriate skincare will keep your skin healthy and counteract drynes
     </figcaption>
     <a href="#"></a>
   </figure>
-  <figure class="blog-post">
-    <div class="image"><img src="makeup.png" alt="pr-sample25" /></div>
+  <figure class="blog-post hover">
+    <div class="image"><img src="makeup.png"  /></div>
     <figcaption>
       <div class="date"><span class="day">23</span><span class="month">July</span></div>
       <h3>Vibrant Makeup Looks</h3>
       <p>
-  
 For some women, vibrant makeup shouts their confidence and good mood out to the world; for others, it provides a beautiful medium with which to paint beauty and creativity.
       </p>
     </figcaption>
@@ -99,6 +99,7 @@ For some women, vibrant makeup shouts their confidence and good mood out to the 
   {% schema %}
 {
   "name": "Company News",
+  
   "settings": [
     {
       "type": "text",

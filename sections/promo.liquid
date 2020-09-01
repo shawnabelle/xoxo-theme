@@ -6,17 +6,16 @@
 
 <div class="promo-bg">
     {%- if section.settings.promo_image != blank -%}
-    <a href="{{ section.settings.button_link }}"><img src="{{ section.settings.promo_image | img_url: '900x'}}"></a>
+    <a href="{{ section.settings.button_link }}"><img src="{{ section.settings.promo_image | img_url: '1200x'}}"></a>
     {% else %}
-    <a href="{{ section.settings.button_link }}"><img src="{{ 'makeup-flower.png' | asset_img_url: '600x' }}"></a>
+    <a href="{{ section.settings.button_link }}"><img src="{{ 'beauty-trends.jpg' | asset_img_url: '1200x' }}"></a>
     {% endif %}
 </div>
 </section>
 
 {% schema %}
   {
-      "name": "Current Promotion",
-      
+      "name": "Single Image",
     "settings": [
         {
             "id": "promo_image",
@@ -24,20 +23,14 @@
             "label": "Chose Your Image"
           },
       {
-        "type": "text",
-        "id": "button_text",
-        "label": "Shop Now",
-        "default": "Shop Now"
-      },
-      {
         "type": "url",
         "id": "button_link",
-        "label": "Button Link"
+        "label": "Image Destination"
       }
       ],
       "presets": [
     {
-      "name": "Current Promotion",
+      "name": "Single Image",
       "category": "Image"
     }
   ] 
